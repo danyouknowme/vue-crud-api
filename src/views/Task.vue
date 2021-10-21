@@ -50,7 +50,7 @@
                 if (!sure) return;
                 await api.deletetask(id);
                 this.flash('task deleted successfully!', 'success');
-                const newtasks = this.tasks.filter(task => task.id !== id);
+                const newtasks = this.tasks.filter(task => task._id !== id);
                 this.tasks = newtasks;
             }
         },
